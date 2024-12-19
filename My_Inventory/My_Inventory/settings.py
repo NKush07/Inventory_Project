@@ -81,16 +81,10 @@ WSGI_APPLICATION = 'My_Inventory.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-         'default': {
-             'ENGINE': 'djongo',
-             'NAME': 'inventory-data',
-             'CLIENT': {
-                 'host': 'your_mongo_host', # Replace with your connection string or cluster connection string if using cluster
-                 'port': 27017,  # Replace with your MongoDB port if different
-                 'username': 'your_mongo_username',
-                 'password': 'your_mongo_password',
-             },
-         }
+        'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
      }
 
 
